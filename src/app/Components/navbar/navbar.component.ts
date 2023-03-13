@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,12 +8,19 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent {
   
+  @Input() expand = '';
+  @Output() expandChange = new EventEmitter<string>();
 
   constructor(private router:Router){
   }
 
   doNavigate(...path:string[]){
-    this.router.navigate(path)
+    this.router.navigate(path);  
+    this.changeExpand('')  
+  }
+
+  changeExpand(value:string){
+    this.expandChange.emit(value);
   }
 
 }
