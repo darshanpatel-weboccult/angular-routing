@@ -5,12 +5,18 @@
 
       <ul class="container-navs">
         <li class="pos-relative">
-          <a href="javascript:void(0)">HRMS &#9660;</a>
+          <a href="javascript:void(0)"
+            >HRMS
+            <img src="../../../assets/Images/arrow-down.png" alt="down_arr"
+          /></a>
           <ul class="container-sub-navs">
             <li class="pos-relative">
               <a routerLink="time-tracker"
-                >Time Tracker &#9654;</a
-              >
+                >Time Tracker
+                <img
+                  src="../../../assets/Images/arrow-right.png"
+                  alt="down_arr"
+              /></a>
               <ul class="container-popup-navs">
                 <li>
                   <a routerLink="time-tracker/time-log">Time Log</a>
@@ -32,8 +38,11 @@
             </li>
             <li class="pos-relative">
               <a #hrms3 (click)="hrms3.blur()" routerLink="leave-management"
-                >Leave Management &#9654;</a
-              >
+                >Leave Management
+                <img
+                  src="../../../assets/Images/arrow-right.png"
+                  alt="down_arr"
+              /></a>
               <ul class="container-popup-navs">
                 <li>
                   <a routerLink="leave-management/leaves">Leaves</a>
@@ -45,8 +54,11 @@
             </li>
             <li class="pos-relative">
               <a #hrms4 (click)="hrms4.blur()" routerLink="payroll"
-                >Payroll &#9654;</a
-              >
+                >Payroll
+                <img
+                  src="../../../assets/Images/arrow-right.png"
+                  alt="down_arr"
+              /></a>
               <ul class="container-popup-navs">
                 <li>
                   <a routerLink="payroll/salary-slip">Salary Slip</a>
@@ -61,7 +73,10 @@
           </ul>
         </li>
         <li class="pos-relative">
-          <a href="javascript:void(0)">Password Mgmt. &#9660;</a>
+          <a href="javascript:void(0)"
+            >Password Mgmt.
+            <img src="../../../assets/Images/arrow-down.png" alt="down_arr"
+          /></a>
           <ul class="container-sub-navs">
             <li>
               <a
@@ -74,7 +89,10 @@
           </ul>
         </li>
         <li class="pos-relative">
-          <a href="javascript:void(0)">Toggl &#9660;</a>
+          <a href="javascript:void(0)"
+            >Toggl
+            <img src="../../../assets/Images/arrow-down.png" alt="down_arr"
+          /></a>
           <ul class="container-sub-navs">
             <li>
               <a #toggl1 (click)="toggl1.blur()" routerLink="toggl-report"
