@@ -11,7 +11,6 @@ export class AppComponent {
 
   changeExpand(value: string) {
     this.expand = value;
-    console.log(value);
-    
   }
+  
 }

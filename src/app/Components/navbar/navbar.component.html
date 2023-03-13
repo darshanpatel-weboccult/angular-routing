@@ -68,19 +68,19 @@
             </li>
           </ul>
         </li>
-        <li class="pos-relative" (click)="expand = 'password'">
+        <li class="pos-relative" >
           <a href="javascript:void(0)"
           (click)="changeExpand('password')"
             >Password Mgmt.
             <img src="../../../assets/Images/arrow-down.png" alt="down_arr"
           /></a>
-          <ul class="container-sub-navs" *ngIf="expand === 'password'">
+          <ul class="container-sub-navs" *ngIf="expand && expand === 'password'">
             <li>
               <a (click)="doNavigate('password-management')">Password Management</a>
             </li>
           </ul>
         </li>
-        <li class="pos-relative" (click)="expand = 'toggl'">
+        <li class="pos-relative" >
           <a href="javascript:void(0)"
           (click)="changeExpand('toggl')"
             >Toggl
