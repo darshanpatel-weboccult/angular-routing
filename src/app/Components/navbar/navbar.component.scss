@@ -33,10 +33,12 @@
                 }
             }
 
-            &:focus-within > .container-sub-navs{
-                display: flex;
-            }
+            
         }
+    }
+
+    .expanded > .container-sub-navs{
+        display: flex;
     }
 
     .container-sub-navs{
@@ -51,6 +53,7 @@
             display: inline-block;
             width: 100%;
             padding: 5px;
+            cursor: pointer;
             &:hover{
                 background-color: lightblue;
             }
@@ -72,5 +75,6 @@
         display: none;
         flex-direction: column;
     }
+    
     
 }
