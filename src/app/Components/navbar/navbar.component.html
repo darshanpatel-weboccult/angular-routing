@@ -1,14 +1,15 @@
-<div class="navbar">
+<div class="navbar" >
   <div class="wrapper">
     <div class="container-navbar">
       <h1 routerLink="/">WebOccult</h1>
       <ul class="container-navs">
-        <li class="pos-relative" #hrms (click)="hrms.classList.toggle('expanded')">
+        <li class="pos-relative" >
           <a href="javascript:void(0)"
+          (click)="changeExpand('hrms')"
             >HRMS
             <img src="../../../assets/Images/arrow-down.png" alt="down_arr"
           /></a>
-          <ul class="container-sub-navs">
+          <ul *ngIf="expand === 'hrms'" class="container-sub-navs" >
             <li class="pos-relative">
               <a (click)="doNavigate('time-tracker')"
                 >Time Tracker
@@ -67,23 +68,25 @@
             </li>
           </ul>
         </li>
-        <li class="pos-relative" #password (click)="password.classList.toggle('expanded')">
+        <li class="pos-relative" >
           <a href="javascript:void(0)"
+          (click)="changeExpand('password')"
             >Password Mgmt.
             <img src="../../../assets/Images/arrow-down.png" alt="down_arr"
           /></a>
-          <ul class="container-sub-navs">
+          <ul class="container-sub-navs" *ngIf="expand && expand === 'password'">
             <li>
               <a (click)="doNavigate('password-management')">Password Management</a>
             </li>
           </ul>
         </li>
-        <li class="pos-relative" #toggl (click)="toggl.classList.toggle('expanded')">
+        <li class="pos-relative" >
           <a href="javascript:void(0)"
+          (click)="changeExpand('toggl')"
             >Toggl
             <img src="../../../assets/Images/arrow-down.png" alt="down_arr"
           /></a>
-          <ul class="container-sub-navs">
+          <ul class="container-sub-navs" *ngIf="expand === 'toggl'">
             <li>
               <a (click)="doNavigate('toggl-report')">Toggl Report</a>
             </li>
